@@ -37,7 +37,7 @@ const Projects = () => {
     
 
   return (
-    <div className="p-6 md:w-300">
+    <div className="p-6 md:w-300 bg-gray-300">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Projects</h1>
         <div className="flex gap-4">

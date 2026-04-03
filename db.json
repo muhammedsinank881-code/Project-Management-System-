@@ -31,7 +31,7 @@
           "userId": "ShSNMAfi_YU",
           "username": "sinan",
           "task": "DB-management / backend ",
-          "status": "pending"
+          "status": "completed"
         }
       ],
       "status": "active",
@@ -214,6 +214,29 @@
       "startDate": "2026-04-03T04:59:45.235Z",
       "endDate": null,
       "id": "OlAdsvh7u3k"
+    },
+    {
+      "name": "ABC ecommer",
+      "description": "an Ecommerse web-app",
+      "deadline": "",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "jkjgkjg",
+          "status": "pending"
+        },
+        {
+          "userId": "DmibziLPVNg",
+          "username": "Fasal",
+          "task": "ghhh",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-03T05:25:58.457Z",
+      "endDate": null,
+      "id": "wVYcM_uiHRo"
     }
   ],
   "roles": [
@@ -287,6 +310,24 @@
       "read": false,
       "createdAt": "2026-04-03T04:59:45.259Z",
       "id": "HsLpojxNyNY"
+    },
+    {
+      "userId": "ShSNMAfi_YU",
+      "message": "New project \"ABC ecommer\" was created.",
+      "type": "project",
+      "projectId": "wVYcM_uiHRo",
+      "read": false,
+      "createdAt": "2026-04-03T05:25:58.477Z",
+      "id": "ahHzs8mRk5s"
+    },
+    {
+      "userId": "DmibziLPVNg",
+      "message": "New project \"ABC ecommer\" was created.",
+      "type": "project",
+      "projectId": "wVYcM_uiHRo",
+      "read": false,
+      "createdAt": "2026-04-03T05:25:58.478Z",
+      "id": "J11Jvvz7RHI"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
