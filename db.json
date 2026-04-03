@@ -1,0 +1,293 @@
+{
+  "users": [
+    {
+      "name": "sinan",
+      "email": "sinan@mail.com",
+      "password": "1234",
+      "role": "super_admin",
+      "id": "ShSNMAfi_YU"
+    },
+    {
+      "name": "Fasal",
+      "email": "fasal@mail.com",
+      "password": "1234",
+      "role": "admin",
+      "id": "DmibziLPVNg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "School management ",
+      "description": "Management-system",
+      "deadline": "2026-04-17",
+      "members": [
+        {
+          "userId": "DmibziLPVNg",
+          "username": "Fasal",
+          "task": "UI/UX /Frontent",
+          "status": "pending"
+        },
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "DB-management / backend ",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:22:55.999Z",
+      "endDate": null,
+      "id": "eIMZxzHm7Eo"
+    },
+    {
+      "name": "hdasjd",
+      "description": "a,jbacjsc",
+      "deadline": "2026-04-02",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "ajkxvA",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:44:25.745Z",
+      "endDate": null,
+      "id": "veSQT7GrnN4"
+    },
+    {
+      "name": "GXAKJASC",
+      "description": "knbc",
+      "deadline": "2026-04-30",
+      "members": [
+        {
+          "userId": "DmibziLPVNg",
+          "username": "Fasal",
+          "task": "wsdb",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:44:48.376Z",
+      "endDate": null,
+      "id": "U1yTAesbgJs"
+    },
+    {
+      "name": "school management",
+      "description": "kjs",
+      "deadline": "2026-04-19",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "kjs",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:45:11.687Z",
+      "endDate": null,
+      "id": "GIJoGfh3uAo"
+    },
+    {
+      "name": "School management ",
+      "description": "xna jb sc",
+      "deadline": "2026-04-23",
+      "members": [
+        {
+          "userId": "DmibziLPVNg",
+          "username": "Fasal",
+          "task": "skxgagcasc",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:45:38.090Z",
+      "endDate": null,
+      "id": "ldAF3Yq9btY"
+    },
+    {
+      "name": "arun",
+      "description": "xxdxfxfjghjk",
+      "deadline": "2026-04-08",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "jb",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-02T11:46:51.522Z",
+      "endDate": null,
+      "id": "MEdime7a0T8"
+    },
+    {
+      "name": "arun",
+      "description": "",
+      "deadline": "2026-04-16",
+      "members": [],
+      "status": "active",
+      "startDate": "2026-04-02T11:47:05.989Z",
+      "endDate": null,
+      "id": "WFyk8jhcwEc"
+    },
+    {
+      "name": "nnnnnnnnnnnnnnnnnn",
+      "description": "",
+      "deadline": "",
+      "members": [],
+      "status": "active",
+      "startDate": "2026-04-02T11:47:22.628Z",
+      "endDate": null,
+      "id": "74cTUsrn5Xo"
+    },
+    {
+      "name": "kkkkkkkkkkkkk",
+      "description": "",
+      "deadline": "",
+      "members": [],
+      "status": "active",
+      "startDate": "2026-04-02T11:47:31.151Z",
+      "endDate": null,
+      "id": "CrWnVxkPgdM"
+    },
+    {
+      "name": "kkkkkkkk",
+      "description": "",
+      "deadline": "",
+      "members": [],
+      "status": "active",
+      "startDate": "2026-04-02T11:47:39.962Z",
+      "endDate": null,
+      "id": "Jq0qJBn3ccw"
+    },
+    {
+      "name": "ChefKichen",
+      "description": "just a website ",
+      "deadline": "2026-04-17",
+      "members": [
+        {
+          "userId": "DmibziLPVNg",
+          "username": "Fasal",
+          "task": "full work ",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-03T04:05:35.007Z",
+      "endDate": null,
+      "id": "_iitmZOg9YE"
+    },
+    {
+      "name": "sqwkjdbd",
+      "description": "wdwwwf",
+      "deadline": "2026-04-15",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "dew",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-03T04:42:53.890Z",
+      "endDate": null,
+      "id": "bke3Xn0ivdk"
+    },
+    {
+      "name": "name",
+      "description": "web",
+      "deadline": "2026-04-23",
+      "members": [
+        {
+          "userId": "ShSNMAfi_YU",
+          "username": "sinan",
+          "task": "dqww",
+          "status": "pending"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-03T04:59:45.235Z",
+      "endDate": null,
+      "id": "OlAdsvh7u3k"
+    }
+  ],
+  "roles": [
+    {
+      "id": "super_admin",
+      "name": "super_admin",
+      "permissions": [
+        "view_employees",
+        "add_employee",
+        "edit_employee",
+        "delete_employee",
+        "view_projects",
+        "add_project",
+        "edit_project",
+        "delete_project",
+        "view_tasks",
+        "complete_task",
+        "view_roles",
+        "add_role",
+        "edit_role",
+        "delete_role"
+      ]
+    },
+    {
+      "id": "8b0RjRBvGg0",
+      "name": "admin",
+      "permissions": [
+        "view_employees",
+        "add_employee",
+        "edit_employee",
+        "delete_employee",
+        "view_projects",
+        "add_project",
+        "edit_project",
+        "delete_project",
+        "view_tasks",
+        "complete_task",
+        "view_roles"
+      ]
+    },
+    {
+      "id": "aC1JqEcObxY",
+      "name": "HR",
+      "permissions": [
+        "view_employees",
+        "view_projects",
+        "add_project",
+        "edit_project",
+        "delete_project",
+        "view_tasks",
+        "complete_task",
+        "edit_employee"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "userId": "ShSNMAfi_YU",
+      "message": "New project \"name\" was created.",
+      "type": "project",
+      "projectId": "OlAdsvh7u3k",
+      "read": true,
+      "createdAt": "2026-04-03T04:59:45.259Z",
+      "id": "D1WUyrfsXQ8"
+    },
+    {
+      "userId": "DmibziLPVNg",
+      "message": "New project \"name\" was created.",
+      "type": "project",
+      "projectId": "OlAdsvh7u3k",
+      "read": false,
+      "createdAt": "2026-04-03T04:59:45.259Z",
+      "id": "HsLpojxNyNY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
