@@ -10,6 +10,8 @@ import AddProject from './components/admin/AddProject'
 import Roles from './components/admin/Roles'
 import PermissionGuard from './components/PermissionGuard'
 import Notifications from './components/admin/Notifications'
+import Tasks from './components/admin/Tasks'
+import DashboardStats from './components/dashbordContents/DashboardStats'
 
 
 const App = () => {
@@ -26,34 +28,41 @@ const App = () => {
 
         <Route path='role' element={
           <PermissionGuard permission="view_roles">
-            <Roles/>
+            <Roles />
           </PermissionGuard>} />
 
         <Route path='project' element={
           <PermissionGuard permission="view_projects">
             <Projects />
-            </PermissionGuard>} />
+          </PermissionGuard>} />
+
+
+        <Route path='tasks' element={
+          <PermissionGuard permission="view_tasks">
+            <Tasks />
+          </PermissionGuard>
+        } />
 
         <Route path='notifications' element={
-          <Notifications/>
-        }/>
+          <Notifications />
+        } />
 
 
 
         <Route path='employee/addemployee' element={
           <PermissionGuard permission="add_employee">
-            <AddEmployee/>
-            </PermissionGuard>}/>
+            <AddEmployee />
+          </PermissionGuard>} />
 
         <Route path='project/addproject' element={
           <PermissionGuard permission="add_project">
-             <AddProject/>
-          </PermissionGuard>}/>
-        
+            <AddProject />
+          </PermissionGuard>} />
+
 
       </Route>
 
-      {/* <Route path='/' element={<AddEmployee/>}/> */}
+      {/* <Route path='/' element={<DashboardStats/>}/> */}
     </Routes>
   )
 }

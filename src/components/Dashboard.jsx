@@ -24,7 +24,7 @@ const Dashboard = () => {
 
       {/* CONTENT */}
 
-      <div className="ml-20 h-screen flex justify-center p-4 md:p-10">
+      <div className="ml-20 h-screen flex justify-center p-4 md:p-10  overflow-y-auto no-scrollbar">
         <Outlet />
       </div>
 

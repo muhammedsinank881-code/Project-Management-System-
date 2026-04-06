@@ -7,6 +7,35 @@ import { useNotification } from "../context/NotificationContext";
 
 
 const NaveBar = () => {
+
+    const menuItems = [
+        {
+            name: "Home",
+            path: "/home",
+            permission: null, // always visible
+        },
+        {
+            name: "Employee",
+            path: "employee",
+            permission: "view_employees",
+        },
+        {
+            name: "Role",
+            path: "role",
+            permission: "view_roles",
+        },
+        {
+            name: "Project",
+            path: "project",
+            permission: "view_projects",
+        },
+        {
+            name: "Tasks",
+            path: "tasks",
+            permission: "view_tasks",
+        },
+    ];
+
     const { user, logout } = useAuth();
     const { hasPermission } = usePermission();
     const navigate = useNavigate()
@@ -21,217 +50,49 @@ const NaveBar = () => {
     const { getUnreadCount } = useNotification();
     const unreadCount = getUnreadCount(user?.id);
 
+
+
     return (
-        // <nav className="absolute top-0 left-0 w-full z-20  md:px-16 py-6 flex items-center justify-between">
 
-        //     {/* LOGO */}
-        //     <h1 className="text-2xl font-bold tracking-wide">
-        //         ROle
-        //     </h1>
-
-        //     {/* CENTER MENU */}
-        //     <div className="flex md:gap-10 text-gray-700 font-medium">
-
-        //         <NavLink
-        //             to="/home"
-        //             end
-        //             className={({ isActive }) =>
-        //                 `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-        //                 }`
-        //             }
-        //         >
-        //             {({ isActive }) => (
-        //                 <>
-        //                     Home
-
-        //                     <span
-        //                         className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        // ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-        //                     ></span>
-        //                 </>
-        //             )}
-        //         </NavLink>
-
-        //         <NavLink
-        //             to="employee"
-
-        //             className={({ isActive }) =>
-        //                 `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-        //                 }`
-        //             }
-        //         >
-        //             {({ isActive }) => (
-        //                 <>
-        //                     Employee
-
-        //                     <span
-        //                         className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        // ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-        //                     ></span>
-        //                 </>
-        //             )}
-        //         </NavLink>
-        //         {isAdmin &&<NavLink
-        //             to="role"
-
-        //             className={({ isActive }) =>
-        //                 `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-        //                 }`
-        //             }
-        //         >
-        //             {({ isActive }) => (
-        //                 <>
-        //                     Role
-
-        //                     <span
-        //                         className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        // ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-        //                     ></span>
-        //                 </>
-        //             )}
-        //         </NavLink>}
-
-        //         <NavLink
-        //             to="project"
-
-        //             className={({ isActive }) =>
-        //                 `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-        //                 }`
-        //             }
-        //         >
-        //             {({ isActive }) => (
-        //                 <>
-        //                     Project
-
-        //                     <span
-        //                         className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        // ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-        //                     ></span>
-        //                 </>
-        //             )}
-        //         </NavLink>
-
-
-        //     </div>
-
-        //     {/* RIGHT ICONS */}
-        //     <div className="flex md:gap-6 items-center text-xl">
-
-
-        //         <button className="hover:scale-110 transition duration-200">
-        //             <IoIosNotificationsOutline />
-        //         </button>
-
-        //         <button className="hover:scale-110 transition duration-200">
-        //             <RiMenu4Fill />
-        //         </button>
-
-        //         <button 
-        //         onClick={handleLogout}
-        //         className="hover:scale-110 transition duration-200">
-        //             <LuLogOut />
-        //         </button>
-
-        //     </div>
-
-        // </nav>
         <div>
-            <nav className="absolute top-0 left-0 w-20 md:w-30 h-screen z-20 p-6 flex flex-col items-center justify-between ">
+            <nav className="absolute top-0 left-0 w-20 md:w-50 h-screen z-20 p-6 flex flex-col items-center justify-between 
+            bg-white border-r-2 border-indigo-600 shadow-2xl">
 
                 {/* LOGO */}
                 <h1 className="text-2xl font-bold tracking-wide">
                     ROle
                 </h1>
 
-                {/* CENTER MENU */}
+
+
                 <div className="flex flex-col gap-5 md:gap-10 text-gray-700 font-medium">
+                    {menuItems.map((item, i) => {
+                        // permission check
+                        if (item.permission && !hasPermission(item.permission)) return null;
 
-                    <NavLink
-                        to="/home"
-                        end
-                        className={({ isActive }) =>
-                            `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-                            }`
-                        }
-                    >
-                        {({ isActive }) => (
-                            <>
-                                Home
+                        return (
+                            <NavLink
+                                key={i}
+                                to={item.path}
+                                end={item.path === "/home"}
+                                className={({ isActive }) =>
+                                    `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
+                                    }`
+                                }
+                            >
+                                {({ isActive }) => (
+                                    <>
+                                        {item.name}
 
-                                <span
-                                    className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-                                ></span>
-                            </>
-                        )}
-                    </NavLink>
-
-                    {hasPermission("view_employees") && (
-                        <NavLink
-                            to="employee"
-
-                            className={({ isActive }) =>
-                                `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-                                }`
-                            }
-                        >
-                            {({ isActive }) => (
-                                <>
-                                    Employee
-
-                                    <span
-                                        className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-                                    ></span>
-                                </>
-                            )}
-                        </NavLink>
-                    )}
-
-                    {hasPermission("view_roles") && (
-                        <NavLink
-                            to="role"
-
-                            className={({ isActive }) =>
-                                `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-                                }`
-                            }
-                        >
-                            {({ isActive }) => (
-                                <>
-                                    Role
-
-                                    <span
-                                        className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-                                    ></span>
-                                </>
-                            )}
-                        </NavLink>)}
-
-                    {hasPermission("view_projects") && (
-                        <NavLink
-                            to="project"
-
-                            className={({ isActive }) =>
-                                `relative group pb-1 ${isActive ? "text-black font-semibold" : "text-gray-600"
-                                }`
-                            }
-                        >
-                            {({ isActive }) => (
-                                <>
-                                    Project
-
-                                    <span
-                                        className={`absolute left-0 -bottom-1 h-[2px] bg-black transition-all duration-300
-        ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-                                    ></span>
-                                </>
-                            )}
-                        </NavLink>
-                    )}
-
-
+                                        <span
+                                            className={`absolute left-0 -bottom-1 h-[2px] bg-linear-to-r from-pink-500 to-violet-700 transition-all duration-300
+              ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                                        ></span>
+                                    </>
+                                )}
+                            </NavLink>
+                        );
+                    })}
                 </div>
 
                 {/* RIGHT ICONS */}
@@ -249,10 +110,6 @@ const NaveBar = () => {
                             </span>
                         )}
                     </button>
-
-                    {/* <button className="hover:scale-110 transition duration-200">
-                    <RiMenu4Fill />
-                </button> */}
 
                     <button
                         onClick={handleLogout}

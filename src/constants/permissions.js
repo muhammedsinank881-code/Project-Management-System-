@@ -17,6 +17,7 @@ export const PERMISSIONS = {
   VIEW_TASKS: 'view_tasks',
   COMPLETE_TASK: 'complete_task',
   ASSIGN_TASK: 'assign_task',
+  EDIT_TASK: 'edit_task',
   
   // Role permissions
   VIEW_ROLES: 'view_roles',
@@ -25,7 +26,6 @@ export const PERMISSIONS = {
   DELETE_ROLE: 'delete_role',
 };
 
-// Predefined permission groups for easy assignment
 export const PERMISSION_GROUPS = {
   FULL_ACCESS: Object.values(PERMISSIONS),
   
@@ -41,6 +41,14 @@ export const PERMISSION_GROUPS = {
     PERMISSIONS.ADD_EMPLOYEE,
     PERMISSIONS.EDIT_EMPLOYEE,
     PERMISSIONS.DELETE_EMPLOYEE,
+  ],
+
+  // ✅ Add this group
+  TASKS_FULL: [
+    PERMISSIONS.VIEW_TASKS,
+    PERMISSIONS.COMPLETE_TASK,
+    PERMISSIONS.ASSIGN_TASK,
+    PERMISSIONS.EDIT_TASK,
   ],
   
   READ_ONLY: [

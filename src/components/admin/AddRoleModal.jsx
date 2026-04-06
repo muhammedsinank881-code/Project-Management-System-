@@ -26,6 +26,8 @@ const AddRoleModal = ({
     { id: "delete_project", label: "Delete Project" },
     { id: "view_tasks", label: "View Tasks" },
     { id: "complete_task", label: "Complete Task" },
+    { id: "assign_task" , label: "Assign Task"},
+    { id: "edit_task" , label: "Edit Task"},
     { id: "view_roles", label: "View Roles" },
     { id: "add_role", label: "Add Role" },
     { id: "edit_role", label: "Edit Role" },
